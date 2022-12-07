@@ -4,22 +4,17 @@
             <a-button @click="isActiveMenu = !isActiveMenu" :class="{'active': isActiveMenu}" icon="images/plus.svg"/>
             <nav class="menu" :class="{'active': isActiveMenu}">
                 <span class="menu__item">
-                    asdasdasd
-                </span>
-                <span class="menu__item">
-                    asdasdasd
-                </span>
-                <span class="menu__item">
-                    asdasdasd
+                    <a-image image="images/bird.svg"/>
                 </span>
             </nav>
 
 
         </header>
         <section class="wrapper">
-            <div class="animal">
-                <a-image class="animal__block" image="images/cat.svg"/>
-            </div>
+            <a-image class="gelatine-anime animal" image="images/cat.svg"/>
+            <a-image class="animal" image="images/dog.svg"/>
+            <a-image class="animal" image="images/bear.svg"/>
+            <a-image class="animal" image="images/bird.svg"/>
         </section>
     </main>
 </template>

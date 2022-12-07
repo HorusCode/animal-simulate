@@ -1,6 +1,33 @@
 
-@keyframes AnimationName {
+@keyframes gradientAnime {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+.float-anime {
+    animation: float 6s ease-in-out infinite;
+}
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+        filter: drop-shadow(6px 25px 9px rgba(0, 0, 0, 0.46));
+    }
+    50% {
+        transform: translatey(-20px);
+        filter: drop-shadow(6px 65px 26px rgba(0, 0, 0, 0.16));
+    }
+    100% {
+        transform: translatey(0px);
+        filter: drop-shadow(6px 25px 9px rgba(0, 0, 0, 0.46));
+    }
+}
+
+.gelatine-anime {
+    animation: gelatine 0.5s ease-in;
+}
+@keyframes gelatine {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
 }
