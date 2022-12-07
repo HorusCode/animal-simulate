@@ -11,7 +11,7 @@
 
         </header>
         <section class="wrapper">
-            <a-image class="gelatine-anime animal" image="images/cat.svg"/>
+            <a-image class="animal" image="images/cat.svg"/>
             <a-image class="animal" image="images/dog.svg"/>
             <a-image class="animal" image="images/bear.svg"/>
             <a-image class="animal" image="images/bird.svg"/>
