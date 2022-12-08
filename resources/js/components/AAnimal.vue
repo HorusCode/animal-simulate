@@ -1,5 +1,5 @@
 <template>
-    <div class="animal" :class="{'gelatine-float-anime': growed}">
+    <div class="animal" :class="{'gelatine-anime': growed, 'float-anime': !interval}">
         <a-image :image="data.url" :width="data.size * 15"/>
         <span class="animal__title">{{ data.name }}</span>
     </div>
@@ -38,6 +38,7 @@ export default {
                    this.data = response;
                 } else {
                     clearInterval(this.interval);
+                    this.interval = false;
                 }
             }, 1800);
         },

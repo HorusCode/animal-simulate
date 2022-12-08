@@ -22,8 +22,8 @@
     }
 }
 
-.gelatine-float-anime {
-    animation: float 6s ease-in-out,gelatine 0.5s ease-in-out !important;
+.gelatine-anime {
+    animation: gelatine 0.5s ease-in-out !important;
 }
 @keyframes gelatine {
     from, to { transform: scale(1, 1); }
