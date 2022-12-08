@@ -1,0 +1,36 @@
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: $btn-size;
+    height: $btn-size;
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    border: none;
+    transition: .1s box-shadow ease-in-out;
+    z-index: 1;
+
+    &__icon {
+        display: inline-block;
+        height: 28px;
+        width: 28px;
+        -webkit-mask-size: 100%;
+        background-color: black;
+        -webkit-mask-repeat: no-repeat;
+        overflow: hidden;
+        transition: .2s rotate ease-in-out;
+    }
+
+    &.active {
+        .btn__icon {
+            rotate: 135deg;
+        }
+    }
+
+    &:hover {
+        box-shadow: -1px 2px 13px 0px #00000087;
+        cursor: pointer;
+    }
+}
