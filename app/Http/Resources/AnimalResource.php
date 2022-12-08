@@ -13,11 +13,12 @@ class AnimalResource extends JsonResource
      * Transform the resource into an array.
      *
      * @param  Request  $request
-     * @return array|Arrayable|JsonSerializable
+     * @return array
      */
     public function toArray($request)
     {
         return [
+            'id' => $this->resource->id,
             'type' => $this->resource->type,
             'max_size' => $this->resource->max_size,
             'max_age' => $this->resource->max_age,

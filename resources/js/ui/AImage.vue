@@ -1,5 +1,5 @@
 <template>
-    <figure class="image-wrapper">
+    <figure class="image-wrapper" :style="{'width': width + 'px'}">
         <transition name="fade">
             <img class="image" :src="image" alt="alt">
         </transition>
@@ -10,7 +10,8 @@
 export default {
     name: "AImage",
     props: {
-        image: String
+        image: String,
+        width: [String, Number]
     }
 }
 </script>

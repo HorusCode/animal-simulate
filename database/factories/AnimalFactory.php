@@ -16,12 +16,14 @@ class AnimalFactory extends Factory
      */
     public function definition()
     {
+        $age = fake()->numberBetween(5,25);
+        $size = fake()->numberBetween(1,50);
         return [
             'type' => fake()->name,
-            'max_size' => fake()->numberBetween(5,25),
-            'max_age' => fake()->numberBetween(1,15),
+            'max_size' => $size,
+            'max_age' => $age,
             'url' => fake()->imageUrl,
-            'growth_factor' => fake()->randomFloat(1,0,3)
+            'growth_factor' => $size / $age
         ];
     }
 }

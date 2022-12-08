@@ -1,130 +1,21 @@
+@import "base";
+
+@import "elements/button";
+@import "elements/image";
+@import "elements/menu";
+@import "elements/animal";
+
+
 @import "animation";
 
-* {
-    box-sizing: border-box;
-}
-
-.bg {
-    display: grid;
-    grid-template-rows: 1fr 4fr;
-    height: 100vh;
-    width: 100%;
-}
-
-.header {
-    position: relative;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0 3rem;
-}
-
-$btn-size: 6rem;
-.btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: $btn-size;
-    height: $btn-size;
-    background-color: #fff;
-    border-radius: 50%;
-    position: relative;
-    border: none;
-    transition: .1s box-shadow ease-in-out;
-    z-index: 1;
-
-    &__icon {
-        display: inline-block;
-        height: 28px;
-        width: 28px;
-        -webkit-mask-size: 100%;
-        background-color: black;
-        -webkit-mask-repeat: no-repeat;
-        overflow: hidden;
-        transition: .2s rotate ease-in-out;
-    }
-
-    &.active {
-        .btn__icon {
-            rotate: 135deg;
-        }
-    }
-
-    &:hover {
-        box-shadow: -1px 2px 13px 0px #00000087;
-        cursor: pointer;
-    }
-}
-
-.menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.2s;
-    transform: scaleX(0) translateX(0%);
-    transform-origin: left center;
-    opacity: 0;
-    visibility: hidden;
-    height: $btn-size;
-    background-color: #fff;
-    padding-right: 25px;
-    padding-left: calc($btn-size - 2rem);
-    margin-left: calc($btn-size / (-2));
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-
-    &.active {
-        transform: scaleX(1) translateX(0);
-        opacity: 1;
-        visibility: visible;
-    }
 
 
-    &__item {
-        display: inline-flex;
-        align-items: center;
-        margin-right: 20px;
-        transition: 1s;
-        & > .image-wrapper {
-            padding: 1rem;
-            border: 1px solid #eee;
-            border-radius: 50%;
-            height: calc($btn-size - 1rem);
-            cursor: pointer;
-            &:hover {
-                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-            }
-        }
-    }
-}
 
-.animated-gradient {
-    background: linear-gradient(270deg, #1e8ae2, #d000f1);
-    background-size: 400% 400%;
-    animation: gradientAnime 30s ease infinite;
-}
 
-.wrapper {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: .2s all ease-in-out;
-}
 
-.animal {
-    margin: 0 1rem;
-    animation: float 6s ease-in-out infinite;
-}
 
-.image-wrapper {
-    display: inline-block;
-    position: relative;
 
-    & > .image {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-}
+
+
+
 

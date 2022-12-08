@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Actions\GrowOldConditionAction;
 use App\Http\Requests\ConditionRequest;
 use App\Http\Resources\ConditionWithAnimalResource;
 use App\Models\Animal;
 use App\Models\Condition;
-use Illuminate\Http\Request;
 
 class ConditionController extends Controller
 {
@@ -23,11 +23,14 @@ class ConditionController extends Controller
         return $this->sendResoponse($condition);
     }
 
-    public function store(ConditionRequest $request, Animal $animal) {
+    public function grow(Condition $condition, GrowOldConditionAction $growOldConditionAction) {
+        $grown = $growOldConditionAction($condition);
+        return $this->sendResoponse($grown ? new ConditionWithAnimalResource($grown) : [], $grown ? 'Animal to grown old!' : 'Animal died!');
+    }
 
+    public function store(ConditionRequest $request, Animal $animal) {
         $condition = $animal->conditions()->save(
-            $this->condition->fill($request->all()
-            )
+            $this->condition->fill($request->all())
         );
         return $this->sendResoponse(new ConditionWithAnimalResource($condition));
     }

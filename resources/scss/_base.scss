@@ -1,0 +1,34 @@
+$btn-size: 6rem;
+
+.animated-gradient {
+    background: linear-gradient(270deg, #1e8ae2, #d000f1);
+    background-size: 400% 400%;
+    animation: gradientAnime 30s ease infinite;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .2s all ease-in-out;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.bg {
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    height: 100vh;
+    width: 100%;
+}
+
+.header {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 3rem;
+}

@@ -23,6 +23,7 @@ Route::prefix('animals')->group(function () {
 Route::prefix('animal')->group(function () {
     Route::get('/{condition}', [ConditionController::class, 'show']);
     Route::post('/{animal}', [ConditionController::class, 'store']);
+    Route::post('/{condition}/grow', [ConditionController::class, 'grow']);
 });
 
 

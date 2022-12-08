@@ -24,7 +24,6 @@ class ConditionWithAnimalResource extends JsonResource
             'url' => filter_var($animal->url, FILTER_VALIDATE_URL)
                 ? $animal
                 : asset($animal->url),
-
             ];
     }
 }
