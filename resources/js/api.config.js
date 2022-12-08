@@ -1,4 +1,4 @@
 export default {
-    url: 'http://127.0.0.1/api',
+    url: 'http://a0752162.xsph.ru/api',
     headers: {'Content-Type': 'application/json'},
 }
