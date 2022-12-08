@@ -1,6 +1,6 @@
 <template>
     <div class="animal" :class="{'gelatine-anime': growed, 'float-anime': !interval}">
-        <a-image :image="data.url" :width="data.size * 15"/>
+        <a-image :image="data.url" :width="data.size * 13"/>
         <span class="animal__title">{{ data.name }}</span>
     </div>
 </template>
