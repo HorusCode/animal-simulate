@@ -20,18 +20,18 @@ class ConditionController extends Controller
 
 
     public function show(Condition $condition) {
-        return $this->sendResoponse($condition);
+        return $this->sendResponse($condition);
     }
 
     public function grow(Condition $condition, GrowOldConditionAction $growOldConditionAction) {
         $grown = $growOldConditionAction($condition);
-        return $this->sendResoponse($grown ? new ConditionWithAnimalResource($grown) : [], $grown ? 'Animal to grown old!' : 'Animal died!');
+        return $this->sendResponse($grown ? new ConditionWithAnimalResource($grown) : [], $grown ? 'Animal to grown old!' : 'Animal died!');
     }
 
     public function store(ConditionRequest $request, Animal $animal) {
         $condition = $animal->conditions()->save(
             $this->condition->fill($request->all())
         );
-        return $this->sendResoponse(new ConditionWithAnimalResource($condition));
+        return $this->sendResponse(new ConditionWithAnimalResource($condition));
     }
 }
