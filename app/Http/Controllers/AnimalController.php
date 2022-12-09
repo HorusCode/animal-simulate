@@ -9,7 +9,7 @@ class AnimalController extends Controller
 {
     public function index()
     {
-        return $this->sendResoponse(new AnimalCollection(Animal::all()));
+        return $this->sendResponse(new AnimalCollection(Animal::all()));
     }
 
 }

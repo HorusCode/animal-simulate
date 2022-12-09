@@ -9,7 +9,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 
 abstract class Controller
 {
-    public function sendResoponse($result = [], $message = 'Success!', $status = 200, $error = false) {
+    public function sendResponse($result = [], $message = 'Success!', $status = 200, $error = false) {
         return response()->json([
            'success' => !$error,
            'data' => $result,

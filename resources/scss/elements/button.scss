@@ -34,3 +34,11 @@
         cursor: pointer;
     }
 }
+
+
+@media only screen and (max-width: 620px) {
+    .btn {
+        width: $btn-size-mobile;
+        height: $btn-size-mobile;
+    }
+}
